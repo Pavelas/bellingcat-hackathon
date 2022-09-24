@@ -57,3 +57,7 @@ It would be nice if people would be able to share their knowledge with others, a
 ### Collaboration
 
 It could be a very simple way of bringing people together or mobilizing the whole community to solve the most important problems. I have got inspired by Kaggle competitions, where people or companies can provide a challenge and different teams or individuals are trying to solve/provide the most efficient ML model within a short period. It could be something just plain fun, like a challenge, for example, finding geolocation as fast and accurate as possible. So, that junior researchers would be able to practice and learn to use various tools. Or it could be even something serious, for example, Bellingcat may ask for community help and teams or individuals would try to do their research and share their discoveries. Based on that, it would be possible to compare efficiency and based on that share the most efficient ways to achieve certain results. Also it would be possible to compare data accuracy, for example if multiple researchers reach the same result.
+
+### TBA
+
+I have more ideas that could be supplemented or added in the future, however, the features described above are the most important in my opinion. This could attract more people and allow them to collaborate and contribute to the OSINT community.
