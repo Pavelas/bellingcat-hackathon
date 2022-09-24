@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreToolRequest;
-use App\Http\Requests\UpdateToolRequest;
-use App\Models\Tool;
+use App\Http\Requests\StoreTopicRequest;
+use App\Http\Requests\UpdateTopicRequest;
+use App\Models\Topic;
 
-class ToolController extends Controller
+class TopicController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,7 @@ class ToolController extends Controller
      */
     public function index()
     {
-        return view('tools.index', [
-            'tools' => Tool::with('topic')->simplePaginate(Tool::TOOLS_PER_PAGE),
-        ]);
+        //
     }
 
     /**
@@ -33,10 +31,10 @@ class ToolController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreToolRequest  $request
+     * @param  \App\Http\Requests\StoreTopicRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreToolRequest $request)
+    public function store(StoreTopicRequest $request)
     {
         //
     }
@@ -44,23 +42,21 @@ class ToolController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Tool  $tool
+     * @param  \App\Models\Topic  $topic
      * @return \Illuminate\Http\Response
      */
-    public function show(Tool $tool)
+    public function show(Topic $topic)
     {
-        return view('tools.show', [
-            'tool' => $tool,
-        ]);
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Tool  $tool
+     * @param  \App\Models\Topic  $topic
      * @return \Illuminate\Http\Response
      */
-    public function edit(Tool $tool)
+    public function edit(Topic $topic)
     {
         //
     }
@@ -68,11 +64,11 @@ class ToolController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateToolRequest  $request
-     * @param  \App\Models\Tool  $tool
+     * @param  \App\Http\Requests\UpdateTopicRequest  $request
+     * @param  \App\Models\Topic  $topic
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateToolRequest $request, Tool $tool)
+    public function update(UpdateTopicRequest $request, Topic $topic)
     {
         //
     }
@@ -80,10 +76,10 @@ class ToolController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Tool  $tool
+     * @param  \App\Models\Topic  $topic
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tool $tool)
+    public function destroy(Topic $topic)
     {
         //
     }

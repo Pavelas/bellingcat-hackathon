@@ -59,8 +59,7 @@
                     </div>
                     <span class="text-xs text-gray-400">&bull;</span>
                     <div class="flex space-x-2">
-                      <span class="px-3 py-0.5 bg-white border border-gray-200 rounded-full font-semibold text-xs text-gray-500 cursor-pointer hover:bg-gray-50">Social media</span>
-                      <span class="px-3 py-0.5 bg-white border border-gray-200 rounded-full font-semibold text-xs text-gray-500 cursor-pointer hover:bg-gray-50">Scrappers</span>
+                      <span class="px-3 py-0.5 bg-white border border-gray-200 rounded-full font-semibold text-xs text-gray-500 cursor-pointer hover:bg-gray-50">{{ $tool->topic->name }}</span>
                     </div>
                     <span class="text-xs text-gray-400">&bull;</span>
                     <p class="text-sm text-gray-500">{{ $tool->created_at->diffForHumans() }}</p>
