@@ -51,7 +51,7 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, facere impedit ut aspernatur autem earum recusandae numquam iusto illo nulla harum assumenda. Explicabo, sint voluptate doloremque fugiat sequi excepturi ipsum.
             </div>
 
-            <a href="#">
+            <a href="{{ route('tools.index') }}">
                 <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
                         <div>Explore tools</div>
 
