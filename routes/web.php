@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ToolController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +20,6 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::view('/', 'home')->name('home');
+    Route::get('/tools', [ToolController::class, 'index'])->name('tools.index');
+    Route::get('/tools/{tool:slug}', [ToolController::class, 'show'])->name('tools.show');
 });

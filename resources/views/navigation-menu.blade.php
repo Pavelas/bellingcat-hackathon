@@ -15,6 +15,10 @@
                     <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
                         {{ __('Home') }}
                     </x-jet-nav-link>
+
+                    <x-jet-nav-link href="{{ route('tools.index') }}" :active="request()->routeIs('tools.*')">
+                        {{ __('Tools') }}
+                    </x-jet-nav-link>
                 </div>
             </div>
 
@@ -97,7 +101,7 @@
                             </div>
 
                             <x-jet-dropdown-link href="{{ route('profile.show') }}">
-                                {{ __('Profile') }}
+                                {{ __('Edit Profile') }}
                             </x-jet-dropdown-link>
 
                             @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
@@ -140,6 +144,10 @@
             <x-jet-responsive-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
                 {{ __('Home') }}
             </x-jet-responsive-nav-link>
+
+            <x-jet-responsive-nav-link href="{{ route('tools.index') }}" :active="request()->routeIs('tools.*')">
+                {{ __('Tools') }}
+            </x-jet-nav-link>
         </div>
 
         <!-- Responsive Settings Options -->
