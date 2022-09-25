@@ -97,15 +97,30 @@ In this section, I will try to provide a solution to the problems I mentioned ab
 
 #### Community
 
-Researchers would be able to introduce themselves, highlight their strongest areas, discover and find co-researchers, participate in research challenges, share their tooling or work, build OSINT frameworks, collaborate, or even participate in challenges or competitions. In my opinion, it should be a closed community, maybe Bellingcat or community itself could verify and approve people who want to join. But I am not sure about it, I guess this part should probably be discussed later.
+The main goal is to unite people into one community, so that people would be able to:
+
+-   Introduce themselves, highlight their strongest areas.
+-   Discover other researchers and find co-researchers.
+-   Participate in OSINT challenges or competitions.
+-   Share tools they're using or explore what tools other researchers are using.
+-   Easily build OSINT Frameworks or Flow Charts.
 
 #### Tools
 
-Imagine it like a tool database, researchers would be able to add or suggest new tools, add instructions or tutorials on how to use these tools, and search tools not only by category but for example based on the data they have and data they are looking for, vote for their favorite tools, save them, pin to research they share, suggest tools to other researchers or request for tools. Also, there are many more ideas on how the Tools database could be used in the future, for example, people would be able to easily build their OSINT frameworks. Tools could be even integrated using APIs to provide user-friendly UI and easy access for everyone.
+Tools database for everyone with the following features:
 
-#### Learning
+-   Allow researchers to submit or request tools.
+-   Share or explore guides for specific tools.
+-   Ask for a help or support other researchers if they're struggling with tools.
+-   Save the most favorite tools and share with others.
+-   Search tools based on topic / category or the data they have or looking for.
+-   Attach tools to research publications, so that others would be able to see and learn what tools have been used.
+-   Build OSINT Frameworks or Flow Charts using Tools database.
+-   Integrate tools using 3rd party APIs in order to provide user-friendly UI and easy access for everyone.
 
-It would be nice if people would be able to share their knowledge with others, ask for help or write down simple instructions about different methods and techniques on how to solve various problems and find the information researchers are looking for.
+#### Guides
+
+Allow researchers to write and share their work with others. Researchers would be able to learn about different methods and techniques on how to solve various problems, comment, give advice from each other.
 
 #### Collaboration
 
