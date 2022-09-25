@@ -16,16 +16,7 @@ class ToolController extends Controller
      */
     public function index()
     {
-        return view('tools.index', [
-            'tools' => Tool::with('topic')
-                ->addSelect(['favorited_by_user' => Favorite::select('id')
-                    ->where('user_id', auth()->id())
-                    ->whereColumn('tool_id', 'tools.id')
-                ])
-                ->withCount('favorites')
-                ->orderBy('created_at', 'desc')
-                ->simplePaginate(Tool::TOOLS_PER_PAGE),
-        ]);
+        return view('tools.index');
     }
 
     /**

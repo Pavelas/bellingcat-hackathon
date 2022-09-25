@@ -9,11 +9,13 @@ use App\Models\Topic;
 class CreateTool extends Component
 {
     public $title;
+    public $url;
     public $topic = 1;
     public $description;
 
     protected $rules = [
         'title' => 'required|min:4',
+        'url' => 'required|url',
         'topic' => 'required|integer',
         'description' => 'required|min:32',
     ];
@@ -26,6 +28,7 @@ class CreateTool extends Component
             'user_id' => auth()->id(),
             'topic_id' => $this->topic,
             'title' => $this->title,
+            'url' => $this->url,
             'description' => $this->description,
         ]);
 

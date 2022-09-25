@@ -15,6 +15,12 @@
         </div>
 
         <div class="col-span-6">
+            <x-jet-label for="url" value="{{ __('URL') }}" />
+            <x-jet-input id="url" type="text" class="mt-1 block w-full" wire:model.defer="url" placeholder="App link" autofocus />
+            <x-jet-input-error for="url" class="mt-2" />
+        </div>
+
+        <div class="col-span-6">
             <x-jet-label for="topic" value="{{ __('Select topic') }}" />
             <select wire:model.defer="topic" name="topic_add" id="topic_add" class="w-full mt-1 border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 @foreach ($topics as $topic)

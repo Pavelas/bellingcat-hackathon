@@ -19,6 +19,8 @@ return new class extends Migration
             $table->foreignId('topic_id')->constrained();
             $table->string('title');
             $table->string('slug')->nullable();
+            $table->string('url');
+            $table->boolean('is_approved')->default(false);
             $table->text('description');
             $table->timestamps();
         });
