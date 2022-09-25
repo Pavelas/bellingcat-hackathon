@@ -53,11 +53,11 @@ class ToolsList extends Component
                     ->where('user_id', auth()->id())
                     ->whereColumn('tool_id', 'tools.id')
                 ])
-                ->withCount('favorites')
+                ->withCount(['favorites', 'comments'])
                 ->when(!$this->sort || $this->sort === 'Most Popular', function ($query) {
                     return $query->orderBy('favorites_count', 'desc');
                 })
-                ->when($this->sort && $this->sort === 'Approved Tools', function ($query) {
+                ->when($this->sort && $this->sort === 'Approved First', function ($query) {
                     return $query->orderBy('is_approved', 'desc');
                 })
                 ->when($this->sort && $this->sort === 'Newest First', function ($query) {

@@ -30,7 +30,7 @@ class ToolFactory extends Factory
             'topic_id' => $this->faker->numberBetween(1, 3),
             'title' => ucwords($this->faker->words(2, true)),
             'url' => $this->faker->url(),
-            'description' => $this->faker->paragraph(5),
+            'description' => $this->faker->paragraph(18),
             'is_approved' => $this->faker->numberBetween(0, 1),
             'created_at' => $this->faker->dateTimeThisMonth(),
             'updated_at' => now(),

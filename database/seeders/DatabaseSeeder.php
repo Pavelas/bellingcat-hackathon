@@ -10,6 +10,7 @@ use App\Models\Team;
 use App\Models\Tool;
 use App\Models\Topic;
 use App\Models\Favorite;
+use App\Models\Comment;
 
 class DatabaseSeeder extends Seeder
 {
@@ -49,5 +50,9 @@ class DatabaseSeeder extends Seeder
             ->all();
 
         Favorite::factory()->createMany($favorites);
+
+        foreach (Tool::all() as $tool) {
+            Comment::factory(rand(0, 7))->existing()->create(['tool_id' => $tool->id]);
+        }
     }
 }

@@ -19,7 +19,7 @@
         <div class="w-2/12">
             <select wire:model="sort" class="w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <option value="Most Popular">{{ __('Most Popular') }}</option>
-                <option value="Approved Tools">{{ __('Approved Tools') }}</option>
+                <option value="Approved First">{{ __('Approved First') }}</option>
                 <option value="Newest First">{{ __('Newest First') }}</option>
                 <option value="Oldest First">{{ __('Oldest First') }}</option>
             </select>
@@ -35,7 +35,7 @@
 
     <div class="flex flex-col space-y-3 mt-6">
         @forelse ($tools as $tool)
-            @livewire('tool-card', ['tool' => $tool, 'favoritesCount' => $tool->favorites_count], key($tool->id))
+            @livewire('tool-card', ['tool' => $tool, 'favoritesCount' => $tool->favorites_count, 'commentsCount' => $tool->comments_count], key($tool->id))
         @empty
             <p class="text-gray-700">{{ __('Unfortunately, based on your search query there are no results...') }}</p>
         @endforelse

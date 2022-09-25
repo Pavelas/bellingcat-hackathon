@@ -9,12 +9,23 @@ class ToolCard extends Component
 {
     public $tool;
     public $favoritesCount;
+    public $commentsCount;
 
-    public function mount(Tool $tool, $favoritesCount)
+    protected $listeners = [
+        'commentWasCreated'
+    ];
+
+    public function mount(Tool $tool, $favoritesCount, $commentsCount)
     {
         $this->tool = $tool;
         $this->favoritesCount = $favoritesCount;
+        $this->commentsCount = $commentsCount;
         $this->hasFavorited = $tool->isFavoritedByUser(auth()->user());
+    }
+
+    public function commentWasCreated()
+    {
+        $this->tool->refresh();
     }
 
     public function favorite()

@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreToolRequest;
-use App\Http\Requests\UpdateToolRequest;
-use App\Models\Tool;
-use App\Models\Favorite;
+use App\Http\Requests\StoreCommentRequest;
+use App\Http\Requests\UpdateCommentRequest;
+use App\Models\Comment;
 
-class ToolController extends Controller
+class CommentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +15,7 @@ class ToolController extends Controller
      */
     public function index()
     {
-        return view('tools.index');
+        //
     }
 
     /**
@@ -26,16 +25,16 @@ class ToolController extends Controller
      */
     public function create()
     {
-        return view('tools.create');
+        //
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreToolRequest  $request
+     * @param  \App\Http\Requests\StoreCommentRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreToolRequest $request)
+    public function store(StoreCommentRequest $request)
     {
         //
     }
@@ -43,25 +42,21 @@ class ToolController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Tool  $tool
+     * @param  \App\Models\Comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function show(Tool $tool)
+    public function show(Comment $comment)
     {
-        return view('tools.show', [
-            'tool' => $tool,
-            'favoritesCount' => $tool->favorites()->count(),
-            'commentsCount' => $tool->comments()->count(),
-        ]);
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Tool  $tool
+     * @param  \App\Models\Comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function edit(Tool $tool)
+    public function edit(Comment $comment)
     {
         //
     }
@@ -69,11 +64,11 @@ class ToolController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateToolRequest  $request
-     * @param  \App\Models\Tool  $tool
+     * @param  \App\Http\Requests\UpdateCommentRequest  $request
+     * @param  \App\Models\Comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateToolRequest $request, Tool $tool)
+    public function update(UpdateCommentRequest $request, Comment $comment)
     {
         //
     }
@@ -81,10 +76,10 @@ class ToolController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Tool  $tool
+     * @param  \App\Models\Comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tool $tool)
+    public function destroy(Comment $comment)
     {
         //
     }

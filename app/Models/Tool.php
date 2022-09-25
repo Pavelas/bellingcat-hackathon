@@ -51,6 +51,11 @@ class Tool extends Model
         return $this->belongsToMany(User::class, 'favorites');
     }
 
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
     public function isFavoritedByUser(User $user)
     {
         return Favorite::where('user_id', $user->id)
