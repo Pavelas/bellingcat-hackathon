@@ -16,7 +16,9 @@ class ToolController extends Controller
     public function index()
     {
         return view('tools.index', [
-            'tools' => Tool::with('topic')->simplePaginate(Tool::TOOLS_PER_PAGE),
+            'tools' => Tool::with('topic')
+                ->orderBy('created_at', 'desc')
+                ->simplePaginate(Tool::TOOLS_PER_PAGE),
         ]);
     }
 
@@ -27,7 +29,7 @@ class ToolController extends Controller
      */
     public function create()
     {
-        //
+        return view('tools.create');
     }
 
     /**

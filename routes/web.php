@@ -21,5 +21,6 @@ Route::middleware([
 ])->group(function () {
     Route::view('/', 'home')->name('home');
     Route::get('/tools', [ToolController::class, 'index'])->name('tools.index');
+    Route::get('/tools/create', [ToolController::class, 'create'])->name('tools.create');
     Route::get('/tools/{tool:slug}', [ToolController::class, 'show'])->name('tools.show');
 });
