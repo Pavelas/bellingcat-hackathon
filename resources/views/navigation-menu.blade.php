@@ -100,6 +100,10 @@
                                 {{ __('Manage Account') }}
                             </div>
 
+                            <x-jet-dropdown-link href="{{ route('tools.personal') }}">
+                                {{ __('My Tools') }}
+                            </x-jet-dropdown-link>
+
                             <x-jet-dropdown-link href="{{ route('profile.show') }}">
                                 {{ __('Edit Profile') }}
                             </x-jet-dropdown-link>

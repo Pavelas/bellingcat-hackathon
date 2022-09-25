@@ -20,6 +20,23 @@ class ToolController extends Controller
     }
 
     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function personal()
+    {
+        return view('tools.personal', [
+            'tools' => auth()
+                ->user()
+                ->favorites()
+                ->with('topic')
+                ->withCount(['favorites', 'comments'])
+                ->paginate(Tool::TOOLS_PER_PAGE),
+        ]);
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response

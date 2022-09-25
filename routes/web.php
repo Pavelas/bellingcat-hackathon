@@ -22,5 +22,6 @@ Route::middleware([
     Route::view('/', 'home')->name('home');
     Route::get('/tools', [ToolController::class, 'index'])->name('tools.index');
     Route::get('/tools/create', [ToolController::class, 'create'])->name('tools.create');
+    Route::get('/tools/personal', [ToolController::class, 'personal'])->name('tools.personal');
     Route::get('/tools/{tool:slug}', [ToolController::class, 'show'])->name('tools.show');
 });
