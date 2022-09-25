@@ -19,6 +19,7 @@
         <div class="w-2/12">
             <select wire:model="sort" class="w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <option value="Most Popular">{{ __('Most Popular') }}</option>
+                <option value="Approved Tools">{{ __('Approved Tools') }}</option>
                 <option value="Newest First">{{ __('Newest First') }}</option>
                 <option value="Oldest First">{{ __('Oldest First') }}</option>
             </select>

@@ -31,6 +31,7 @@ class ToolFactory extends Factory
             'title' => ucwords($this->faker->words(2, true)),
             'url' => $this->faker->url(),
             'description' => $this->faker->paragraph(5),
+            'is_approved' => $this->faker->numberBetween(0, 1),
             'created_at' => $this->faker->dateTimeThisMonth(),
             'updated_at' => now(),
         ];

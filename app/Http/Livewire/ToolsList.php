@@ -57,6 +57,9 @@ class ToolsList extends Component
                 ->when(!$this->sort || $this->sort === 'Most Popular', function ($query) {
                     return $query->orderBy('favorites_count', 'desc');
                 })
+                ->when($this->sort && $this->sort === 'Approved Tools', function ($query) {
+                    return $query->orderBy('is_approved', 'desc');
+                })
                 ->when($this->sort && $this->sort === 'Newest First', function ($query) {
                     return $query->orderBy('created_at', 'desc');
                 })
