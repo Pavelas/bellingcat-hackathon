@@ -33,6 +33,7 @@ This file will include all the information related to Bellingcat Hackathon - Dig
 
     composer install
     npm install
+    npm run build
     ```
 
 4.  Make sure you have [configured the database](https://laravel.com/docs/9.x#databases-and-migrations), you can use [SQLite](https://www.sqlite.org/index.html)
