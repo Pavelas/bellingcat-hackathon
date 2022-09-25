@@ -24,7 +24,7 @@
             <x-jet-label for="topic" value="{{ __('Select topic') }}" />
             <select wire:model.defer="topic" name="topic_add" id="topic_add" class="w-full mt-1 border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 @foreach ($topics as $topic)
-                    <option value="{{ $topic->id }}">{{ $topic->name }}</option>
+                    <option value="{{ $topic->id }}">{{ $topic->icon }} {{ $topic->name }}</option>
                 @endforeach
             </select>
         </div>

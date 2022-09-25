@@ -12,7 +12,7 @@
             <select wire:model="topic" name="topic" id="topic" class="w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <option value="All Topics">{{ __('All Topics') }}</option>
                 @foreach ($topics as $topic)
-                    <option value="{{ $topic->name }}">{{ $topic->name }}</option>
+                    <option value="{{ $topic->name }}">{{ $topic->icon }} {{ $topic->name }}</option>
                 @endforeach
             </select>
         </div>

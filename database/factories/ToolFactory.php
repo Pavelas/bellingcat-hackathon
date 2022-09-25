@@ -27,7 +27,7 @@ class ToolFactory extends Factory
     {
         return [
             'user_id' => $this->faker->numberBetween(1, 10),
-            'topic_id' => $this->faker->numberBetween(1, 3),
+            'topic_id' => $this->faker->numberBetween(1, 14),
             'title' => ucwords($this->faker->words(2, true)),
             'url' => $this->faker->url(),
             'description' => $this->faker->paragraph(18),

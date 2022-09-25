@@ -23,7 +23,12 @@
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <h3 class="font-bold text-xl text-gray-700">Description</h3>
                 <div class="mt-3 px-10 py-6 bg-white border border-gray-100 rounded-md text-gray-700">
-                    <p>{{ $tool->description }}</p>
+                    <p class="font-bold">App link:
+                        <a href="{{ $tool->url }}" class="ml-1.5 font-normal text-indigo-600 hover:underline" target="_blank">
+                            {{ $tool->url }}
+                        </a>
+                    </p>
+                    <p class="mt-3">{{ $tool->description }}</p>
                 </div>
             </div>
         </div>

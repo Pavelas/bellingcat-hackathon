@@ -30,9 +30,20 @@ class DatabaseSeeder extends Seeder
 
         User::factory(9)->create();
 
-        Topic::factory()->create(['name' => 'Social media']);
-        Topic::factory()->create(['name' => 'Scrappers']);
-        Topic::factory()->create(['name' => 'Geolocation']);
+        Topic::factory()->create(['name' => 'Reverse image search', 'icon' => '📸']);
+        Topic::factory()->create(['name' => 'Metadata', 'icon' => '💿']);
+        Topic::factory()->create(['name' => 'Facial recognition', 'icon' => '🧑‍🦲']);
+        Topic::factory()->create(['name' => 'Social media', 'icon' => '🤳']);
+        Topic::factory()->create(['name' => 'People', 'icon' => '🧑‍🤝‍🧑']);
+        Topic::factory()->create(['name' => 'Maps', 'icon' => '🗺']);
+        Topic::factory()->create(['name' => 'Transport trackers', 'icon' => '✈️']);
+        Topic::factory()->create(['name' => 'Websites', 'icon' => '🌐']);
+        Topic::factory()->create(['name' => 'Companies & Finance', 'icon' => '💵']);
+        Topic::factory()->create(['name' => 'Environment & Wildlife', 'icon' => '🌳']);
+        Topic::factory()->create(['name' => 'Archiving', 'icon' => '🗃️']);
+        Topic::factory()->create(['name' => 'Data visualization', 'icon' => '📊']);
+        Topic::factory()->create(['name' => 'Guides', 'icon' => '📚']);
+        Topic::factory()->create(['name' => 'Education', 'icon' => '🎓']);
 
         Tool::factory(50)->create();
 
