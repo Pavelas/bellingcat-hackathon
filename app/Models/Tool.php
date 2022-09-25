@@ -45,4 +45,32 @@ class Tool extends Model
     {
         return $this->belongsTo(Topic::class);
     }
+
+    public function favorites()
+    {
+        return $this->belongsToMany(User::class, 'favorites');
+    }
+
+    public function isFavoritedByUser(User $user)
+    {
+        return Favorite::where('user_id', $user->id)
+            ->where('tool_id', $this->id)
+            ->exists();
+    }
+
+    public function addToFavorites(User $user)
+    {
+        Favorite::create([
+            'tool_id' => $this->id,
+            'user_id' => $user->id,
+        ]);
+    }
+
+    public function removeFromFavorites(User $user)
+    {
+        Favorite::where('tool_id', $this->id)
+            ->where('user_id', $user->id)
+            ->first()
+            ->delete();
+    }
 }

@@ -9,6 +9,7 @@ use App\Models\User;
 use App\Models\Team;
 use App\Models\Tool;
 use App\Models\Topic;
+use App\Models\Favorite;
 
 class DatabaseSeeder extends Seeder
 {
@@ -19,8 +20,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
-
         User::factory()->withPersonalTeam()->create([
             'name' => 'Bellingcat',
             'email' => 'bellingcat@bellingcat.com',
@@ -28,10 +27,27 @@ class DatabaseSeeder extends Seeder
             'current_team_id' => 1,
         ]);
 
+        User::factory(9)->create();
+
         Topic::factory()->create(['name' => 'Social media']);
         Topic::factory()->create(['name' => 'Scrappers']);
         Topic::factory()->create(['name' => 'Geolocation']);
 
-        Tool::factory(20)->create();
+        Tool::factory(50)->create();
+
+        $toolIds = collect(range(1, 50));
+        $userIds = collect(range(1, 10));
+
+        $possibleFavorites = $userIds->crossJoin($toolIds);
+
+        $favorites = $possibleFavorites
+            ->random(300)
+            ->map(fn($item) => [
+                    'user_id' => $item[0],
+                    'tool_id' => $item[1],
+                ])
+            ->all();
+
+        Favorite::factory()->createMany($favorites);
     }
 }

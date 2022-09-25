@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreToolRequest;
 use App\Http\Requests\UpdateToolRequest;
 use App\Models\Tool;
+use App\Models\Favorite;
 
 class ToolController extends Controller
 {
@@ -17,6 +18,11 @@ class ToolController extends Controller
     {
         return view('tools.index', [
             'tools' => Tool::with('topic')
+                ->addSelect(['favorited_by_user' => Favorite::select('id')
+                    ->where('user_id', auth()->id())
+                    ->whereColumn('tool_id', 'tools.id')
+                ])
+                ->withCount('favorites')
                 ->orderBy('created_at', 'desc')
                 ->simplePaginate(Tool::TOOLS_PER_PAGE),
         ]);
@@ -53,6 +59,7 @@ class ToolController extends Controller
     {
         return view('tools.show', [
             'tool' => $tool,
+            'favoritesCount' => $tool->favorites()->count(),
         ]);
     }
 
