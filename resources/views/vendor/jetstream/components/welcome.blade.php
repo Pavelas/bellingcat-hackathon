@@ -4,7 +4,7 @@
     </div> -->
 
     <div class="text-2xl">
-        Welcome to OSINT Community!
+        Welcome to the OSINT Community!
     </div>
 
     <div class="mt-6 text-gray-500">
